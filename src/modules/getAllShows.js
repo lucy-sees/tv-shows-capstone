@@ -11,7 +11,7 @@ const getAllShows = async () => {
     }
 
     const data = await response.json();
-    const shows = data.slice(0, 12);
+    const shows = data.slice(0, 15);
     listShows(shows);
   } catch (error) {
     throw new Error('Something went wrong, please try again', error);
