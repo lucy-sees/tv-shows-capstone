@@ -1,12 +1,17 @@
 body {
-  background-color: bisque;
+  background-color: #fd5f00;
   font-family: 'Comic Neue', cursive;
-
 }
 
 footer {
-  text-align: start;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: white;
+  font-weight: 600;
   border: 3px solid black;
-  padding: 10px;
+  padding: 5px;
+  position: relative;
   max-width: 100%;
+  background: #005792;
 }
