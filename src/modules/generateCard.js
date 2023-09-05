@@ -8,7 +8,7 @@ const generateCard = (show) => {
   cardTitle.classList.add('card-title');
   const movieTitle = show.name;
   const likeIcon = document.createElement('i');
-  likeIcon.classList.add('fa-regular', 'fa-heart');
+  likeIcon.classList.add('fa-regular', 'fa-heart', 'like-icon');
   cardTitle.textContent = `${movieTitle} `;
   cardTitle.appendChild(likeIcon);
   const likesCounter = document.createElement('span');
@@ -18,7 +18,6 @@ const generateCard = (show) => {
   commentsBtn.classList.add('card-button');
   commentsBtn.textContent = 'Comments';
   movieCard.append(cardImg, cardTitle, likesCounter, commentsBtn);
-  console.log('My Image', show.image.medium);
   return movieCard;
 };
 

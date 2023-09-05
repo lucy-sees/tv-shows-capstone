@@ -27,37 +27,37 @@ body {
 nav {
   display: flex;
   position: sticky;
-  width: 95%;
+  width: 100%;
   left: 0;
   justify-content: space-between;
   align-items: center;
   background-color: black;
   color: white;
-  margin-left: 2.5%;
   padding-right: 20px;
   margin-top: 5px;
 }
 
+main {
+  padding-bottom: 70px;
+}
+
 footer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   color: white;
   font-weight: 600;
-  border: 3px solid black;
   padding: 5px;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 95%;
-  margin-left: 2.5%;
+  width: 100%;
   background: #005792;
-  margin-bottom: 5px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   width: 220px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -83,8 +83,7 @@ footer {
 .badge {
   width: fit-content;
   align-self: flex-end;
-  background-color: #007bff;
-  color: white;
+  color: black;
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -100,4 +99,40 @@ footer {
 
 .card-button:hover {
   background-color: #0056b3;
+}
+
+.like-icon {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.like-icon:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+.like-icon.active {
+  animation: heartBeat 0.5s ease infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
