@@ -55,6 +55,9 @@ footer {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 220px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -78,6 +81,8 @@ footer {
 }
 
 .badge {
+  width: fit-content;
+  align-self: flex-end;
   background-color: #007bff;
   color: white;
   padding: 5px 10px;
