@@ -14,6 +14,7 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 10px;
+  gap: 20px;
 }
 
 .column {
@@ -54,12 +55,13 @@ footer {
 }
 
 .card {
-  width: 300px;
+  width: 220px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .card img {
@@ -68,6 +70,8 @@ footer {
 }
 
 .card-title {
+  display: flex;
+  justify-content: space-around;
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
