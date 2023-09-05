@@ -26,6 +26,10 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: black;
+  color: white;
+  margin: auto;
+  padding-right: 20px;
 }
 
 footer {
