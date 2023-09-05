@@ -1,3 +1,5 @@
+import listShows from './listShows.js';
+
 const url = 'https://api.tvmaze.com/shows';
 
 const getAllShows = async () => {
@@ -9,9 +11,9 @@ const getAllShows = async () => {
     }
 
     const data = await response.json();
-    const allShows = data.slice(0, 20);
-    console.log(allShows);
-    // listShows(allShows);
+    const shows = data.slice(0, 10);
+    console.log(shows);
+    listShows(shows);
   } catch (error) {
     throw new Error('Something went wrong, please try again', error);
   }

@@ -1,9 +1,8 @@
-const generateCard = () => {
-  const listContainer = document.getElementById('list-container');
+const generateCard = (show) => {
   const movieCard = document.createElement('div');
   movieCard.classList.add('card');
   const cardImg = document.createElement('img');
-  cardImg.src = '../imgs/movie-app-logo.png';
+  cardImg.src = show.image.medium;
   cardImg.alt = 'Movie Image';
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
@@ -19,7 +18,8 @@ const generateCard = () => {
   commentsBtn.classList.add('card-button');
   commentsBtn.textContent = 'Comments';
   movieCard.append(cardImg, cardTitle, likesCounter, commentsBtn);
-  listContainer.append(movieCard);
+  console.log('My Image', show.image.medium);
+  return movieCard;
 };
 
 export default generateCard;

@@ -5,4 +5,6 @@ import getAllShows from './modules/getAllShows.js';
 const siteLogo = document.getElementById('logo');
 siteLogo.src = logoImg;
 
-getAllShows();
+window.onload = () => {
+  getAllShows();
+};
