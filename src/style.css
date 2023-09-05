@@ -3,6 +3,31 @@ body {
   font-family: 'Comic Neue', cursive;
 }
 
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px;
+  border: solid grey 1px;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 footer {
   display: flex;
   flex-direction: column;

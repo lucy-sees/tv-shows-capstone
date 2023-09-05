@@ -1,13 +1,5 @@
-import _ from 'lodash';
 import './style.css';
+import logoImg from './imgs/movie-app-logo.png';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+const siteLogo = document.getElementById('logo');
+siteLogo.src = logoImg;
