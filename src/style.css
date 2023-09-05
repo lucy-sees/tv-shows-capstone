@@ -1,7 +1,9 @@
 body {
   background-color: bisque;
+  font-family: 'Comic Neue', cursive;
+
 }
 
 footer {
-  text-align: center;
+  text-align: start;
 }
