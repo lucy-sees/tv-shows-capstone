@@ -151,9 +151,11 @@ Example command:
 - Twitter: [@twitterhandle](https://twitter.com/egichuhis)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/edwin-gichuhi/)
 
-👤 **Lucy Mwangi**
+👤 **Lucy W. Mwangi**
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
+- Twitter: [@\_The_LoneWolf](https://twitter.com/_The_LoneWolf)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucy-w-mwangi-83a31b11b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,6 +186,6 @@ I would like to thank Microverse for this opportunity that has enabled me to lea
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/egichuhis/tv-shows-capstone/blob/bd336def3785f9a32bad6b1fffe7b1250385c676/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
