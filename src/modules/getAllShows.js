@@ -1,8 +1,10 @@
 import listShows from './listShows.js';
+import getAppID from './getAppID.js';
 
 const url = 'https://api.tvmaze.com/shows';
 
 const getAllShows = async () => {
+  getAppID();
   try {
     const response = await fetch(url);
 
