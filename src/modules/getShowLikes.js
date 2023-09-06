@@ -1,5 +1,7 @@
-const id = 'p7eyUav3i6tJe4HpTUQg';
-const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${id}/likes/`;
+import getAppID from './getAppID.js';
+
+const appID = getAppID();
+const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/likes/`;
 
 const getShowLikes = async () => {
   try {

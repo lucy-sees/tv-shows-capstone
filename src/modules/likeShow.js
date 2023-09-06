@@ -1,4 +1,7 @@
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/p7eyUav3i6tJe4HpTUQg/likes/';
+import getAppID from './getAppID.js';
+
+const appID = getAppID();
+const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/likes/`;
 
 const likeShow = async (id, card) => {
   const postData = { item_id: id };
