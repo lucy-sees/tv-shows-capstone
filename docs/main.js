@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getAppID_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getAppID.js */ \"./src/modules/getAppID.js\");\n\n\nconst appID = (0,_getAppID_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nconst url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/likes/`;\n\nconst likeShow = async (id, card) => {\n  const postData = { item_id: id };\n  const requestOptions = {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify(postData),\n  };\n  try {\n    const response = await fetch(url, requestOptions);\n\n    if (!response.ok) {\n      throw new Error('Network response was not ok');\n    }\n    // Increment the likes count on the card\n    const likesCounter = card.querySelector('.badge');\n    const currentLikes = parseInt(likesCounter.textContent, 10);\n    likesCounter.textContent = currentLikes + 1;\n  } catch (error) {\n    throw new Error('Something went wrong, please try again');\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (likeShow);\n\n\n//# sourceURL=webpack://tv-shows-capstone/./src/modules/likeShow.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _getAppID_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getAppID.js */ \"./src/modules/getAppID.js\");\n/* harmony import */ var _updateLikesCounter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./updateLikesCounter.js */ \"./src/modules/updateLikesCounter.js\");\n\n\n\nconst appID = (0,_getAppID_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nconst url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/likes/`;\n\nconst likeShow = async (id, card) => {\n  const postData = { item_id: id };\n  const requestOptions = {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify(postData),\n  };\n  try {\n    const response = await fetch(url, requestOptions);\n\n    if (!response.ok) {\n      throw new Error('Network response was not ok');\n    }\n    (0,_updateLikesCounter_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(card);\n  } catch (error) {\n    throw new Error('Something went wrong, please try again');\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (likeShow);\n\n\n//# sourceURL=webpack://tv-shows-capstone/./src/modules/likeShow.js?");
 
 /***/ }),
 
@@ -197,6 +197,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst saveAppID = (id) => {\n  localStorage.setItem('appID', JSON.stringify(id));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (saveAppID);\n\n//# sourceURL=webpack://tv-shows-capstone/./src/modules/saveAppID.js?");
+
+/***/ }),
+
+/***/ "./src/modules/updateLikesCounter.js":
+/*!*******************************************!*\
+  !*** ./src/modules/updateLikesCounter.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst updateLikesCounter = (card) => {\n  const likesCounter = card.querySelector('.badge');\n  const currentLikes = parseInt(likesCounter.textContent, 10);\n\n  if (Number.isNaN(currentLikes)) {\n    likesCounter.textContent = '1';\n  } else {\n    likesCounter.textContent = currentLikes + 1;\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateLikesCounter);\n\n\n//# sourceURL=webpack://tv-shows-capstone/./src/modules/updateLikesCounter.js?");
 
 /***/ }),
 
