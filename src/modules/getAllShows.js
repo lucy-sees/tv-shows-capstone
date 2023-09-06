@@ -1,3 +1,4 @@
+import getShowLikes from './getShowLikes.js';
 import listShows from './listShows.js';
 
 const url = 'https://api.tvmaze.com/shows';
@@ -12,7 +13,8 @@ const getAllShows = async () => {
 
     const data = await response.json();
     const shows = data.slice(0, 15);
-    listShows(shows);
+    const showLikes = getShowLikes();
+    listShows(shows, showLikes);
   } catch (error) {
     throw new Error('Something went wrong, please try again', error);
   }
