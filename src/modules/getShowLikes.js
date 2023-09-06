@@ -1,5 +1,3 @@
-import getAppID from './getAppID.js';
-
 const id = 'p7eyUav3i6tJe4HpTUQg';
 const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${id}/likes/`;
 
