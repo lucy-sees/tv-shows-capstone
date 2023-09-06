@@ -16,7 +16,7 @@ const generateCard = (show, showLike) => {
   cardTitle.appendChild(likeIcon);
   const likesCounter = document.createElement('span');
   likesCounter.classList.add('badge');
-  likesCounter.textContent = showLike;
+  likesCounter.textContent = `${showLike} Likes`;
   const commentsBtn = document.createElement('button');
   commentsBtn.classList.add('card-button');
   commentsBtn.textContent = 'Comments';
