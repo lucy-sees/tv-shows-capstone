@@ -11,7 +11,7 @@ const generateCard = (show, showLike) => {
   const movieTitle = show.name;
   const likeIcon = document.createElement('i');
   likeIcon.classList.add('fa-regular', 'fa-heart', 'like-icon');
-  likeIcon.addEventListener('click', () => likeShow(show.id));
+  likeIcon.addEventListener('click', () => likeShow(show.id, movieCard));
   cardTitle.textContent = `${movieTitle} `;
   cardTitle.appendChild(likeIcon);
   const likesCounter = document.createElement('span');

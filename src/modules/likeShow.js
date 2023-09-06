@@ -1,6 +1,6 @@
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/p7eyUav3i6tJe4HpTUQg/likes/';
 
-const likeShow = async (id) => {
+const likeShow = async (id, card) => {
   const postData = { item_id: id };
   const requestOptions = {
     method: 'POST',
@@ -15,6 +15,10 @@ const likeShow = async (id) => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
+    // Increment the likes count on the card
+    const likesCounter = card.querySelector('.badge');
+    const currentLikes = parseInt(likesCounter.textContent, 10);
+    likesCounter.textContent = currentLikes + 1;
   } catch (error) {
     throw new Error('Something went wrong, please try again');
   }
