@@ -11,16 +11,18 @@ const getShowLikes = async () => {
       throw new Error('Network response was not ok');
     }
 
-    // Check if the response has a body
     if (response.headers.get('content-length') === '0') {
       throw new Error('Response body is empty');
     }
 
     const data = await response.json();
-    console.log('Show Likes Data:', data);
-    // return data;
+    const likesObject = {};
+    data.forEach((item) => {
+      likesObject[item.item_id] = item.likes;
+    });
+
+    return likesObject;
   } catch (error) {
-    console.error('Error fetching show likes:', error);
     throw new Error('Something went wrong, please try again');
   }
 };
