@@ -5,9 +5,9 @@
   <img src="./src/imgs/movie-app-logo.png" alt="logo" width="200"  height="auto" />
   <br/>
 
-  <!-- <img src="./src/imgs/1.png" alt="logo" width="500"  height="auto" />
+  <img src="./src/imgs/1.png" alt="logo" width="500"  height="auto" />
   <br/>
-  <img src="./src/imgs/2.png" alt="logo" width="500"  height="auto" /> -->
+  <!-- <img src="./src/imgs/2.png" alt="logo" width="500"  height="auto" /> -->
 
 </div>
 
@@ -67,6 +67,10 @@
 ### Key Features <a name="key-features"></a>
 
 - **List structure layout**
+- **Fetch TV Shows from API**
+- **Display the fetched TV Shows**
+- **Like a TV Show(s)**
+- **Increment like counter and update view**
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,9 +165,8 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Get list of movies from API**
-- [ ] **Display fetched movies on website**
-- [ ] **Comment on movie**
+- [ ] **Comment on TV Show details**
+- [ ] **Popup to show TV Show details**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,6 +189,6 @@ I would like to thank Microverse for this opportunity that has enabled me to lea
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/egichuhis/tv-shows-capstone/blob/bd336def3785f9a32bad6b1fffe7b1250385c676/MIT.md) licensed.
+This project is [MIT](/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

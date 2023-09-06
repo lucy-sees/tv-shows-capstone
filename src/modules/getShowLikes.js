@@ -11,10 +11,6 @@ const getShowLikes = async () => {
       throw new Error('Network response was not ok');
     }
 
-    if (response.headers.get('content-length') === '0') {
-      throw new Error('Response body is empty');
-    }
-
     const data = await response.json();
     const likesObject = {};
     data.forEach((item) => {
