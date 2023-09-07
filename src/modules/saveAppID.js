@@ -1,5 +1,5 @@
-const saveAppID = (id) => {
-  localStorage.setItem('appID', JSON.stringify(id));
+const saveAppID = (appID) => {
+  localStorage.setItem('appID', appID);
 };
 
 export default saveAppID;

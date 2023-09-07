@@ -1,13 +1,13 @@
 import createNewApp from './createNewApp.js';
 
 const getAppID = () => {
-  const savedAppID = localStorage.getItem('appID');
-
-  if (savedAppID) {
-    const appID = JSON.parse(savedAppID);
-    return appID;
+  let appID = localStorage.getItem('appID');
+  if (!appID) {
+    appID = createNewApp();
+    localStorage.setItem('appID', appID);
   }
-  return createNewApp();
+
+  return appID;
 };
 
 export default getAppID;
