@@ -1,4 +1,5 @@
 import getAppID from './getAppID.js';
+import getCommentsCount from './getCommentsCount.js';
 
 const appID = getAppID();
 
@@ -12,6 +13,7 @@ const fetchShowComments = async (id) => {
     }
 
     const data = await response.json();
+    getCommentsCount(data);
     return data;
   } catch (error) {
     throw new Error('Something went wrong, please try again');
