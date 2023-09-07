@@ -199,9 +199,11 @@ footer {
 }
 
 .popup-card img {
-  width: 100%;
+  width: 62%;
   height: 50%;
   display: block;
+  padding-top: 10px;
+  border-radius: 20px;
 }
 
 .popup-card-content {
