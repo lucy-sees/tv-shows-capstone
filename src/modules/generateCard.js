@@ -1,4 +1,5 @@
 import likeShow from './likeShow.js';
+import openPopup from './openPopup.js';
 
 const generateCard = (show, showLike, numberOfShow) => {
   const movieCard = document.createElement('div');
@@ -26,6 +27,7 @@ const generateCard = (show, showLike, numberOfShow) => {
   const commentsBtn = document.createElement('button');
   commentsBtn.classList.add('card-button');
   commentsBtn.textContent = 'Comments';
+  commentsBtn.addEventListener('click', () => openPopup(show));
   movieCard.append(cardImg, cardTitle, likesCounter, commentsBtn);
   return movieCard;
 };
