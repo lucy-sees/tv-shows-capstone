@@ -16,6 +16,7 @@ const createNewApp = async () => {
 
     const appID = await response.text();
     saveAppID(appID);
+    return appID;
   } catch (error) {
     throw new Error('Something went wrong, please try again');
   }

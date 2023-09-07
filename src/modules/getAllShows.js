@@ -1,12 +1,8 @@
 import listShows from './listShows.js';
-import getAppID from './getAppID.js';
-import getShowsCount from './getShowsCount.js';
 
-const url = 'https://api.tvmaze.com/shows';
-
-const getAllShows = async () => {
-  getAppID();
+const getAllShows = async (appID) => {
   try {
+    const url = 'https://api.tvmaze.com/shows';
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -15,10 +11,9 @@ const getAllShows = async () => {
 
     const data = await response.json();
     const shows = data.slice(0, 15);
-    const numberOfShows = getShowsCount(shows);
-    listShows(shows, numberOfShows);
+    listShows(appID, shows);
   } catch (error) {
-    throw new Error('Something went wrong, please try again', error);
+    throw new Error('Error while fetching shows', error);
   }
 };
 
