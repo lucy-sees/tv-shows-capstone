@@ -71,6 +71,9 @@
 - **Display the fetched TV Shows**
 - **Like a TV Show(s)**
 - **Increment like counter and update view**
+- **Popup window to show more TV Show mdetails**
+- **Post comments to Involvement API**
+- **Fetch comments from API and display**
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,8 +168,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Comment on TV Show details**
-- [ ] **Popup to show TV Show details**
+- [ ] **UI/UX improvement**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
