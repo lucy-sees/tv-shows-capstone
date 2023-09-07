@@ -22,7 +22,6 @@ const getShowLikes = async (appID) => {
 
     return likesObject;
   } catch (error) {
-    console.error('Something went wrong during fetching likes:', error);
     return {};
   }
 };
