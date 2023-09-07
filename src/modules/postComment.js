@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2';
 import clearInputs from './clearInputs.js';
 import getAppID from './getAppID.js';
+import updateComments from './updateComments.js';
 
 const Toast = Swal.mixin({
   toast: true,
@@ -43,6 +44,7 @@ const postComment = async (id, nameData, commentData) => {
         title: 'Comment posted successfully',
       });
       clearInputs();
+      updateComments(id);
     } else {
       throw new Error('Something went wrong');
     }

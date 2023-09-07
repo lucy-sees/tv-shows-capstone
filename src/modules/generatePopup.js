@@ -42,6 +42,7 @@ const generatePopup = (show, commentsData) => {
 
   const commentsContainer = document.createElement('div');
   commentsContainer.classList.add('comments-container');
+  commentsContainer.id = `comments-container-${show.id}`;
 
   if (commentsData.length === 0) {
     const noCommentsMessage = document.createElement('p');
