@@ -1,6 +1,6 @@
 import likeShow from './likeShow.js';
 
-const generateCard = (show, showLike) => {
+const generateCard = (show, showLike, numberOfShow) => {
   const movieCard = document.createElement('div');
   movieCard.classList.add('card');
   const cardImg = document.createElement('img');
@@ -8,10 +8,16 @@ const generateCard = (show, showLike) => {
   cardImg.alt = `${show.name} image`;
   const cardTitle = document.createElement('h2');
   cardTitle.classList.add('card-title');
-  const movieTitle = show.name;
+  const movieTitle = `${numberOfShow}. ${show.name}`;
   const likeIcon = document.createElement('i');
   likeIcon.classList.add('fa-regular', 'fa-heart', 'like-icon');
-  likeIcon.addEventListener('click', () => likeShow(show.id, movieCard));
+  likeIcon.addEventListener('click', () => {
+    likeIcon.classList.add('active');
+    setTimeout(() => {
+      likeIcon.classList.remove('active');
+    }, 2000);
+    likeShow(show.id, movieCard);
+  });
   cardTitle.textContent = `${movieTitle} `;
   cardTitle.appendChild(likeIcon);
   const likesCounter = document.createElement('span');
