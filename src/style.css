@@ -102,7 +102,7 @@ footer {
 }
 
 .like-icon {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -112,7 +112,8 @@ footer {
 }
 
 .like-icon.active {
-  animation: heartBeat 0.5s ease infinite;
+  animation: heartBeat 0.5s ease infinite, colorRed 2s;
+  color: red;
 }
 
 @keyframes heartBeat {
@@ -134,5 +135,15 @@ footer {
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes colorRed {
+  0% {
+    color: red;
+  }
+
+  100% {
+    color: red;
   }
 }

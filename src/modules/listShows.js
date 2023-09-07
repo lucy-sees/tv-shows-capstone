@@ -11,10 +11,14 @@ const listShows = async (shows) => {
     throw new Error('Oops! Try again. Reload page', Error);
   }
 
+  let numberOfShow = 1;
+
   shows.forEach((show) => {
     const showLike = showLikes[show.id] || 0;
-    const movieCard = generateCard(show, showLike);
+    const movieCard = generateCard(show, showLike, numberOfShow);
     listContainer.append(movieCard);
+
+    numberOfShow += 1;
   });
 };
 
