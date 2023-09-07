@@ -2,9 +2,6 @@ import Swal from 'sweetalert2';
 import clearInputs from './clearInputs.js';
 import getAppID from './getAppID.js';
 
-const appID = getAppID();
-const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/comments/`;
-
 const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
@@ -18,21 +15,24 @@ const Toast = Swal.mixin({
 });
 
 const postComment = async (id, nameData, commentData) => {
-  const postData = {
-    item_id: id,
-    username: nameData,
-    comment: commentData,
-  };
-
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(postData),
-  };
-
   try {
+    const appID = await getAppID();
+    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appID}/comments/`;
+
+    const postData = {
+      item_id: id,
+      username: nameData,
+      comment: commentData,
+    };
+
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postData),
+    };
+
     Swal.showLoading();
     const response = await fetch(url, requestOptions);
     Swal.close();
