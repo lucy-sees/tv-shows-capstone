@@ -1,0 +1,267 @@
+body {
+  background-color: #fd5f00;
+  font-family: 'Comic Neue', cursive;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding-right: 20px;
+  margin-top: 5px;
+}
+
+main {
+  padding-bottom: 70px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #005792;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badge {
+  width: fit-content;
+  align-self: flex-end;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.card-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.like-icon {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.like-icon:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+.like-icon.active {
+  animation: heartBeat 0.5s ease infinite, colorRed 2s;
+  color: red;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorRed {
+  0% {
+    color: red;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  cursor: pointer;
+  font-size: 28px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.popup-card {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: scroll;
+  background-color: #fff;
+  align-items: center;
+}
+
+.popup-card img {
+  width: 62%;
+  height: 50%;
+  display: block;
+  padding-top: 10px;
+  border-radius: 20px;
+}
+
+.popup-card-content {
+  padding: 16px;
+}
+
+.popup-card-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: center;
+}
+
+.popup-card-details {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.popup-card-type,
+.popup-card-rating {
+  margin-right: 10px;
+}
+
+.popup-card-summary {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.2;
+}
+
+.comments-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 300px;
+}
+
+.name-input {
+  font-size: 18px;
+}
+
+.comment-btn {
+  width: 50%;
+  font-size: 18px;
+}
+
+.comments-div {
+  width: 90%;
+  margin: auto;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.comment-date {
+  width: fit-content;
+}
