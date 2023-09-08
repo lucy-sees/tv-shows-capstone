@@ -43,6 +43,10 @@ const updateComments = async (id) => {
         commentsContainer.appendChild(commentElement);
       });
     }
+    const commentsTitle = document.querySelector(`#comments-title-${id}`);
+    if (commentsTitle) {
+      commentsTitle.textContent = `Comments (${data.length})`;
+    }
   } catch (error) {
     throw new Error('Something went wrong during fetching comments:', error);
   }

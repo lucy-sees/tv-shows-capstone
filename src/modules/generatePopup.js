@@ -1,4 +1,5 @@
 import postComment from './postComment.js';
+import updateComments from './updateComments.js';
 
 const generatePopup = (show, commentsData) => {
   const numberOfComments = commentsData.length;
@@ -39,6 +40,7 @@ const generatePopup = (show, commentsData) => {
   const commentsTitle = document.createElement('h3');
   commentsTitle.classList.add('comments-title');
   commentsTitle.textContent = `Comments (${numberOfComments})`;
+  commentsTitle.id = `comments-title-${show.id}`;
 
   const commentsContainer = document.createElement('div');
   commentsContainer.classList.add('comments-container');
@@ -89,11 +91,13 @@ const generatePopup = (show, commentsData) => {
   const commentBtn = document.createElement('button');
   commentBtn.classList.add('comment-btn');
   commentBtn.textContent = 'Comment';
-  commentBtn.addEventListener('click', () => {
+  commentBtn.addEventListener('click', async () => {
     const nameData = nameInput.value;
     const commentData = commentInput.value;
-    postComment(show.id, nameData, commentData);
+    await postComment(show.id, nameData, commentData);
+    await updateComments(show.id);
   });
+
   commentsForm.append(nameInput, commentInput, commentBtn);
   commentsDiv.append(commentsTitle, commentsContainer, addCommentsTitle);
   popupCard.append(closeBtn, popupImg, popupCardContent, commentsDiv, commentsForm);
