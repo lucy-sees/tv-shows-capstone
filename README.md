@@ -23,6 +23,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Project Presentation](#-project-presentation)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -84,6 +85,10 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Website Demo Link](https://egichuhis.github.io/tv-shows-capstone/)
+
+## 🚀 Project Presentation<a name="live-demo"></a>
+
+- [Project Demo Video](https://drive.google.com/file/d/1YHo9a9qtRdvKKalXhpaItqfxefEdFaCm/view?usp=drive_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
