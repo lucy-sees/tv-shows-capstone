@@ -164,7 +164,6 @@ Example command:
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
 - Twitter: [@\_The_LoneWolf](https://twitter.com/_The_LoneWolf)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucy-w-mwangi-83a31b11b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
